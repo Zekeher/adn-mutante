@@ -1,0 +1,35 @@
+.container{
+  margin: 0 auto;
+  text-align: center;
+.adn-table {
+  background: #5279fc;
+  color: white;
+}
+.adn-body {
+  background: #e2e1e1;
+  .adn-container {
+    width: 80%;
+    background: #b6b5b5;
+    text-align: center;
+    letter-spacing: 1em;
+  }
+}
+}
+.btn-create-adn{
+  position: fixed;
+  width: 35px;
+  height: 35px;
+  border-radius: 50px;
+  background: green;
+  font-size: 1.3em;
+  color:white;
+  top:10px;
+  right: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  &:hover{
+    background: #025f02;
+  }
+}

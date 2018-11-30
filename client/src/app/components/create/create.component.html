@@ -1,0 +1,52 @@
+<div class="container">
+  <h1>Crear Adn</h1>
+  <form [formGroup]="formAdn" (ngSubmit)="saveAdn(formAdn.value)">
+    <input
+      class="form-control"
+      formControlName="0"
+      maxlength="6"
+      onkeyup="filterAdn(this)"
+      type="text"
+    />
+    <input
+      class="form-control"
+      formControlName="1"
+      maxlength="6"
+      onkeyup="filterAdn(this)"
+      type="text"
+    />
+    <input
+      class="form-control"
+      formControlName="2"
+      maxlength="6"
+      onkeyup="filterAdn(this)"
+      type="text"
+    />
+    <input
+      class="form-control"
+      formControlName="3"
+      maxlength="6"
+      onkeyup="filterAdn(this)"
+      type="text"
+    />
+    <input
+      class="form-control"
+      formControlName="4"
+      maxlength="6"
+      onkeyup="filterAdn(this)"
+      type="text"
+    />
+    <input
+      class="form-control"
+      formControlName="5"
+      maxlength="6"
+      onkeyup="filterAdn(this)"
+      type="text"
+    />
+    <hr />
+    <div class="float-right">
+      <button class="btn btn-primary" [disabled]="formAdn.invalid">Crear</button>
+      <a class="btn btn-danger" [routerLink]="['/']">Cancelar</a>
+    </div>
+  </form>
+</div>

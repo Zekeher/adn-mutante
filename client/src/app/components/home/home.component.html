@@ -1,0 +1,29 @@
+<div *ngIf="error">
+  <h1>{{error}}</h1>
+</div>
+<div *ngIf="!error" class="container">
+  <h1>Challenger ADN Mutantes</h1>
+  <table class="table">
+    <thead class="adn-table">
+      <tr>
+        <td>#</td>
+        <td>ADN</td>
+        <td>MUTANTE</td>
+      </tr>
+    </thead>
+    <tbody class="adn-body">
+      <tr *ngFor="let adn of listAdn; let i = index">
+        <td>{{i}}</td>
+        <td class="adn-container">
+          <div class="row">
+            <div class="col-md-12" *ngFor="let a of adn">
+                  {{a}}
+            </div>
+          </div>
+        </td>
+        <td>{{adn | isMutant }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<a class="btn-create-adn" [routerLink]="['/create']">+</a>

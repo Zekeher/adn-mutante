@@ -1,0 +1,19 @@
+{
+  "name": "server-adn",
+  "version": "1.0.0",
+  "description": "server-host-local",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"npm run start:server\" \"npm run start:client\"",
+    "start:server":"node index.js",
+    "start:client":"cd .. && cd client && npm start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Hermoso 'Zekeher' Ezequiel",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "concurrently": "^4.1.0",
+    "express": "^4.16.4"
+  }
+}
