@@ -2,10 +2,18 @@
 // Expresion regular
 const regex = /([ATGC])\1{3,4}/;
 
+/** Esta funcion con nuestra expresion regular chequea horizontalmente nuestro ADN 
+ * Si Cumple con el requerimiento de la regex nos va a devolver un true, de lo contrario un false
+ * en este caso filtramos esa informacion para solamente obtener los que son true.
+*/
 function getStringH(data) {
   return data.filter(data => regex.test(data));
 }
 
+
+/** 
+ * Esta funcion con nuestra expresion regular chequea Verticalmente nuestro ADN 
+*/
 function getStringV(data) {
   var dataV = [];
   var add = [];
@@ -24,12 +32,16 @@ function getStringV(data) {
 function revertString(data){
     return data.split("").reverse().join("");
 }
-
+/** 
+ * Esta funcion revertimos nuestro ADN para que pueda chequear nuevamente Diagonalmente nuestro ADN. 
+*/
 function getRevertDiagonal(data){
     data = data.map(x => { return revertString(x)});
     return getDiagonal(data);
 }
-
+/** 
+ * Esta funcion con nuestra expresion regular chequea Diagonalmente nuestro ADN 
+*/
 function getDiagonal(data) {
   var add = [];
   var dataD = [];
@@ -52,7 +64,10 @@ function getDiagonal(data) {
   });
   return dataD.filter(data => regex.test(data));
 }
-
+/** 
+ * Esta funcion es llamada por nuestro appController y 
+ * este se dedica de llamar nuestras funciones de checkeo para saber si es Mutante o no nuestro ADN
+*/
 function getMutants(data){
     let dataV = getStringV(data);
     let dataH = getStringH(data);

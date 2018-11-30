@@ -16,6 +16,7 @@ export class CreateComponent implements OnInit {
     return this.formAdn.controls;
   }
   constructor(private formBuilder: FormBuilder, private appServices: AppService, private router: Router) { }
+  // Esta funcion es para guardar nuestro nuevo ADN
   saveAdn(data) {
     const save = [];
     for (let i = 0; i < 6; i++) {
@@ -35,5 +36,4 @@ export class CreateComponent implements OnInit {
       5: ['', [Validators.required, Validators.minLength(6)]]
     });
   }
-
 }

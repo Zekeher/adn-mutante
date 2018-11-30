@@ -14,6 +14,7 @@ export class MutantPipe implements PipeTransform {
     this.setValue = { dna: value };
     if (this.checkMutant) {
       this.checkMutant = false;
+      // Este servicio nos checkea si es mutante o no nuestro ADN
       this.appService.isMutant(this.setValue).subscribe(
         data => {
           this.result = 'Mutante';

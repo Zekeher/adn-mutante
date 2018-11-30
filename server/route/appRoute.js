@@ -2,7 +2,9 @@
 var express = require("express");
 var appController = require("../controllers/appControllers");
 var api = express.Router();
-
+/**
+ * Funcion para obtener toda las lista de los ADN que estan registrados en nuesto JSON
+ */
 api.get("/mutant", async (req, res) => {
   try {
     const result = await appController.getAllList();
@@ -11,7 +13,9 @@ api.get("/mutant", async (req, res) => {
     res.status(500).send({ err: "Problemas con el servidor" });
   }
 });
-
+/**
+ * Funcion para agregar un nuevo ADN en nuestro registro que se encuentra en el JSON
+ */
 api.post("/add", async (req, res) => {
   try {
     const result = await appController.createAdn(req.body);
@@ -20,7 +24,12 @@ api.post("/add", async (req, res) => {
     res.status(500).send({ err: "Problemas con el servidor" });
   }
 });
-
+/**
+ * Funcion para verificar que el ADN que enviamos es Mutante o NO
+ * Casos de Resultado:
+ * [Status:200] - Es Mutante
+ * [Status:403] - No es Mutante
+ */
 api.post("/mutant", async (req, res) => {
   try {
     let adn = req.body.dna;

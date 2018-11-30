@@ -19,7 +19,11 @@ class AppControllers {
     });
     return readJson[i];
   }
-  // CheckMutant
+  /** 
+   * CheckMutant
+   * Esta funcion llama a otro Controllador llamado Mutante que lo ubicamos en nuestra carpeta Tools
+   * porque lo vamos a usar como una herramienta. 
+   */ 
   async isMutant(adn) {
     return mutantControllers.getMutants(adn);
   }
