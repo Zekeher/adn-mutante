@@ -24,11 +24,12 @@ Ahora el siguiente paso es clonar nuestro repositorio de adn-mutante
 # URL Backend: 
 - METHOD: GET [http://localhost:3977/api/mutant] // Trae toda la lista de ADN
 - METHOD: POST [http://localhost:3977/api/mutant] // Verficica si es mutante o no
-** Para esta caso necesitas un json con el siguiente formato
-{
-“dna”:["ATGCGA","CAGTGC","TTATGT","AGAAGG","CCCCTA","TCACTG"]
-}
-**
+ 
+    Para esta caso necesitas un json con el siguiente formato
+    {
+        “dna”:["ATGCGA","CAGTGC","TTATGT","AGAAGG","CCCCTA","TCACTG"]
+    }
+
 - METHOD: POST [http://localhost:3977/api/add] // Para Agregar un nuevo ADN
 
 #URL Front-end:
